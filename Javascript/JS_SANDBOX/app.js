@@ -257,7 +257,7 @@
 // console.log(val);
 
                                         
-//---------------------------------------------------------section -6 ------------------------
+//---------------------------------------------------------section -7 ------------------------
                                           // template Literals
                                         //   const name = 'John';
                                         //   const age = 31;
@@ -294,7 +294,7 @@
                                           
                                         //   document.body.innerHTML = html;
 
-//-----------------------------------------------------------section -7----------------------------------------------
+//-----------------------------------------------------------section -8----------------------------------------------
                                               //  Arrays and Arrays Methods
 
                                               // Create some arrays
@@ -357,3 +357,275 @@
 
 // console.log(numbers);
 // console.log(val);
+
+
+//---------------------------------------------------section - 9---------------------------------------------------------
+                                          //object Literals
+
+                                          // const person = {
+                                          //   firstName: 'Steve',
+                                          //   lastName: 'Smith',
+                                          //   age: 36,
+                                          //   email: 'steve@aol.com',
+                                          //   hobbies: ['music', 'sports'],
+                                          //   address: {
+                                          //     city: 'Miami',
+                                          //     state: 'FL'
+                                          //   },
+                                          //   getBirthYear: function(){
+                                          //     return 2017 - this.age;
+                                          //   }
+                                          // }
+                                          
+                                          // let val;
+                                          
+                                          // val = person;
+                                          // // Get specific value
+                                          // val = person.firstName;
+                                          // val = person['lastName'];
+                                          // val = person.age;
+                                          // val = person.hobbies[1];
+                                          // val = person.address.state;
+                                          // val = person.address['city'];
+                                          // val = person.getBirthYear();
+                                          
+                                          // console.log(val);
+                                          
+                                          // const people = [
+                                          //   {name: 'John', age: 30},
+                                          //   {name: 'Mike', age: 23},
+                                          //   {name: 'Nancy', age: 40}
+                                          // ];
+                                          
+                                          // for(let i = 0; i < people.length; i++){
+                                          //   console.log(people[i].name);
+                                          // }
+
+//-------------------------------------------------section-10----------------------------------------------
+                                              //DAte and Time
+
+// let val;
+
+// const today = new Date();
+// let birthday = new Date('9-10-1981 11:25:00');
+// birthday = new Date('September 10 1981');
+// birthday = new Date('9/10/1981');
+
+// val = today.getMonth();
+// val = today.getDate();
+// val = today.getDay();
+// val = today.getFullYear();
+// val = today.getHours();
+// val = today.getMinutes();
+// val = today.getSeconds();
+// val = today.getMilliseconds();
+// val = today.getTime();
+
+// birthday.setMonth(2);
+// birthday.setDate(12);
+// birthday.setFullYear(1985);
+// birthday.setHours(3);
+// birthday.setMinutes(30);
+// birthday.setSeconds(25);
+
+// console.log(birthday);
+
+//--------------------------------------------------section -11 ---------------------------------------------
+                                            // conditional statement
+// if(something){
+//   do something
+// } else {
+//   do something else
+// }
+
+// const id = 100;
+
+// // // EQUAL TO
+// // if(id == 100){
+// //   console.log('CORRECT');
+// // } else {
+// //   console.log('INCORRECT');
+// // }
+
+// // // NOT EQUAL TO
+// // if(id != 101){
+// //   console.log('CORRECT');
+// // } else {
+// //   console.log('INCORRECT');
+// // }
+
+// // // EQUAL TO VALUE & TYPE
+// // if(id === 100){
+// //   console.log('CORRECT');
+// // } else {
+// //   console.log('INCORRECT');
+// // }
+
+// // // EQUAL TO VALUE & TYPE
+// // if(id !== 100){
+// //   console.log('CORRECT');
+// // } else {
+// //   console.log('INCORRECT');
+// // }
+
+// // Test if undefined
+// // if(typeof id !== 'undefined'){
+// //   console.log(`The ID is ${id}`);
+// // } else {
+// //   console.log('NO ID');
+// // }
+
+// // GREATER OR LESS THAN
+// // if(id <= 100){
+// //   console.log('CORRECT');
+// // } else {
+// //   console.log('INCORRECT');
+// // }
+
+// // IF ELSE
+
+// const color = 'yellow';
+
+// // if(color === 'red'){
+// //   console.log('Color is red');
+// // } else if(color === 'blue'){
+// //   console.log('Color is blue');
+// // } else {
+// //   console.log('Color is not red or blue');
+// // }
+
+// // LOGICAL OPERATORS
+
+// const name = 'Steve';
+// const age = 70;
+
+// // AND &&
+// if(age > 0 && age < 12){
+//   console.log(`${name} is a child`);
+// } else if(age >= 13 && age <= 19){
+//   console.log(`${name} is a teenager`);
+// } else {
+//   console.log(`${name} is an adult`);
+// }
+
+// // OR ||
+// if(age < 16 || age > 65){
+//   console.log(`${name} can not run in race`);
+// } else {
+//   console.log(`${name} is registered for the race`);
+// }
+
+// // TERNARY OPERATOR
+// console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+// // WITHOUT BRACES
+// if(id === 100)
+//   console.log('CORRECT');
+// else
+//   console.log('INCORRECT');
+
+// if(id === 100)
+//   console.log('CORRECT');
+// else
+//   console.log('INCORRECT');
+
+
+//-------------------------------------------------------------------------------section -12-------------------------------------------
+                                                        // Switch
+
+// const color = 'yellow';
+
+// switch(color){
+//   case 'red':
+//     console.log('Color is red');
+//     break;
+//   case 'blue':
+//     console.log('Color is blue');
+//     break;
+//   default:
+//     console.log('Color is not red or blue');
+//     break;
+// }
+
+// let day;
+
+// switch(new Date().getDay()){
+//   case 0:
+//     day = 'Sunday';
+//     break;
+//   case 1:
+//     day = 'Monday';
+//     break;
+//   case 2:
+//     day = 'Tuesday';
+//     break;
+//   case 3:
+//     day = 'Wednesday';
+//     break;
+//   case 4:
+//     day = 'Thursday';
+//     break;
+//   case 5:
+//     day = 'Friday';
+//     break;
+//   case 6:
+//     day = 'Saturday';
+//     break;
+// }
+
+// console.log(`Today is ${day}`);
+
+
+//---------------------------------------------------------------section -13----------------------------------------------
+                                              // Function declaration and Expression
+
+
+// // FUNCTION DECLARATIONS
+
+// function greet(firstName = 'John', lastName = 'Doe'){
+//   // if(typeof firstName === 'undefined'){firstName = 'John'}
+//   // if(typeof lastName === 'undefined'){lastName = 'Doe'}
+//   //console.log('Hello');
+//   return 'Hello ' + firstName + ' ' + lastName;
+// }
+
+// // console.log(greet());
+
+
+                                              
+// // FUNCTION EXPRESIONS
+
+// const square = function(x = 3){
+//   return x*x;
+// };
+
+// // console.log(square());
+
+// // IMMIDIATLEY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+
+// // (function(){
+// //   console.log('IIFE Ran..');
+// // })();
+
+// // (function(name){
+// //   console.log('Hello '+ name);
+// // })('Brad');
+
+// // PROPERTY METHODS
+
+// const todo = {
+//   add: function(){
+//     console.log('Add todo..');
+//   },
+//   edit: function(id){
+//     console.log(`Edit todo ${id}`);
+//   }
+// }
+
+// todo.delete = function(){
+//   console.log('Delete todo...');
+// }
+
+// todo.add();
+// todo.edit(22);
+// todo.delete();
