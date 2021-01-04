@@ -485,3 +485,6 @@ document.querySelector('form').addEventListener('submit', function(e){
   tasks.forEach(function(task){
     console.log(task);
   });
+
+  //-----------------------------now the project---------------------------------------
+  
