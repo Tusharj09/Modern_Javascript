@@ -1,8 +1,10 @@
 // game values
 let min = 1,
 max = 10,
-winningnumber = getRandomNum(min,max),
+winningnumber = getWinningNum(min,max),
 guessleft = 3;
+
+console.log(winningnumber);
 
     //UI Elements
 const game = document.getElementById('game'),
