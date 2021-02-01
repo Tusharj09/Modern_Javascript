@@ -9,13 +9,12 @@ document.getElementById('button2').addEventListener('click',getExternal);
 function getText(){
 
     fetch('test.txt')
-    .then(function(res){
-       return res.text();
-    }).then(function(data) {
+    .then(res => res.text())
+    .then(data =>{
         console.log(data);
-    }).catch(function(err){
-        console.log(err);
-    });
+        document.getElementById('output').innerHTML = data;
+    })
+    .catch(err =>console.log(err));
 
 }
 
