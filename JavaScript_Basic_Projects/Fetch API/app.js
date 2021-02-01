@@ -22,13 +22,12 @@ function getText(){
 function getJson(){
     
     fetch('posts.json')
-    .then(function(res){
-       return res.json();
-    }).then(function(data) {
+    .then(res => res.json())
+    .then(data =>{
         console.log(data);
-    }).catch(function(err){
-        console.log(err);
-    });
+        document.getElementById('output').innerHTML = data;
+    })
+    .catch(err =>console.log(err));
 
 }
 
