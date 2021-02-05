@@ -10,13 +10,13 @@ class UI {
             <div class="row">
                 <div class= "col-md-3">
                     <img class = "img-fluid mb-2" src ="${user.avatar_url}">
-                    <a href= "${user.html_url}" target="_blank" class ="btn btn-primary btn-block">View Profile</a>
+                    <a href= "${user.html_url}" target="_blank" class ="btn btn-primary btn-block mb-4">View Profile</a>
                 </div>
                 <div class= "col-md-9">
                     <span class = "badge badge-primary">Public Repos: ${user.public_repos}</span>
-                    <span class = "badge badge-primary">Public Repos: ${user.public_gists}</span>
-                    <span class = "badge badge-primary">Public Repos: ${user.followers}</span>
-                    <span class = "badge badge-primary">Public Repos: ${user.public_following}</span>
+                    <span class = "badge badge-primary">Public Gists: ${user.public_gists}</span>
+                    <span class = "badge badge-primary">Public Follower: ${user.followers}</span>
+                    <span class = "badge badge-primary">Public Following: ${user.public_following}</span>
                     <br><br>
                     <ul class="list-group">
                         <li class= "list-group-item">Company:${user.company} </li>
@@ -27,7 +27,79 @@ class UI {
                 </div>
             </div>
         </div>
+        <h3 class = "page-heading mb-3">Latest Repos </h3>
+        <div id = "repos"></div>
         `;
 
     }
+
+
+    //Show user repository
+    showRepos(repos)
+    {
+    let output ='';
+
+    repos.forEach(function(repo) {
+    output +=`
+    <div class = "card card-body mb-2">
+        <div class="row">
+            <div class= "col-md-6">
+                <a href="${repo.html_url}" target="_blank">${repo.name};</a>
+            </div>
+            <div class= "col-md-6">
+            <span class = "badge badge-primary">Stars: ${repo.stargazers_count}</span>
+            <span class = "badge badge-primary">Watchers: ${repo.watchers}</span>
+            <span class = "badge badge-primary">Forks: ${repo.forms_count}</span>
+            </div>
+        </div>
+    </div>
+    `;
+    });
+
+
+    document.getElementById('repos').innerHTML=output;
+    }
+
+
+
+    //clear alert message
+    clearAlert()
+    {
+        const currentAlert = document.querySelector('.alert');
+        if(currentAlert ) {
+            currentAlert.remove();
+        }
+    }
+
+    clearProfile()
+    {
+        this.profile.innerHTML = '';
+    }
+
+    showAlert(msg , className)
+    {// clear any previous alert
+        this.clearAlert();
+
+        //Creat div
+        const div = document.createElement('div');
+        //Add clasess
+        div.className = className;
+        //Add text
+        div.appendChild(document.createTextNode(msg));
+        //Get Parent
+
+        const container = document.querySelector('.searchContainer');
+        //get search box
+        const search = document.querySelector('.search');
+        // insert Alert
+        container.insertBefore(div,search);
+
+
+        // time out after 3 second
+        setTimeout( ()  =>{
+            this.clearAlert();
+        },2000);
+
+    }
 }
+

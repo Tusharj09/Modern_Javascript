@@ -22,12 +22,13 @@ if(userText !==''){
            if(data.profile.message ==='Not Found')
              {
                  //Show Alert
-            
-
+               ui.showAlert('User not found','alert alert-danger');
+               
              }
              else {
              //Show profile
                ui.showProfile(data.profile);
+               ui.showRepos(data.repos);
              }
     
      })
@@ -38,5 +39,7 @@ if(userText !==''){
 }
 else {
     //Clear Profile
+    ui.clearProfile();
+
 }
 });
